@@ -1,0 +1,50 @@
+Dec 20 23:52:49.281 HYPERVISOR: Release 0.2.17-amd64/Darwin (tag 2017072410)
+Dec 20 23:52:49.282 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 64107.
+Dec 20 23:52:49.284 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 20 23:52:49.285 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/dennis/GNS3/projects/simple-multipool-dhcp/project-files/dynamips 
+Dec 20 23:52:49.285 GENERAL: working_dir=/Users/dennis/GNS3/projects/simple-multipool-dhcp/project-files/dynamips
+Dec 20 23:52:49.285 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/dennis/GNS3/projects/simple-multipool-dhcp/project-files/dynamips/a72ae490-e112-42b1-a705-efb95d908d31 
+Dec 20 23:52:49.285 GENERAL: working_dir=/Users/dennis/GNS3/projects/simple-multipool-dhcp/project-files/dynamips/a72ae490-e112-42b1-a705-efb95d908d31
+Dec 20 23:52:49.285 HYPERVISOR: exec_cmd: vm create R2 2 c3600 
+Dec 20 23:52:49.285 VM: VM R2 created.
+Dec 20 23:52:49.286 HYPERVISOR: exec_cmd: vm set_con_tcp_port R2 5002 
+Dec 20 23:52:49.286 HYPERVISOR: exec_cmd: c3600 get_mac_addr R2 
+Dec 20 23:52:49.286 HYPERVISOR: exec_cmd: c3600 set_chassis R2 3660 
+Dec 20 23:52:49.287 HYPERVISOR: exec_cmd: vm get_status R2 
+Dec 20 23:52:49.287 HYPERVISOR: exec_cmd: vm set_idle_pc R2 0x605f0ccc 
+Dec 20 23:52:49.289 HYPERVISOR: exec_cmd: vm set_ios R2 /Users/dennis/GNS3/images/IOS/c3660-a3jk9s-mz.124-19.image 
+Dec 20 23:52:49.289 HYPERVISOR: exec_cmd: c3600 set_mac_addr R2 cc02.b9c0.0000 
+Dec 20 23:52:49.289 HYPERVISOR: exec_cmd: vm set_nvram R2 256 
+Dec 20 23:52:49.289 HYPERVISOR: exec_cmd: vm set_ram R2 192 
+Dec 20 23:52:49.290 HYPERVISOR: exec_cmd: vm get_status R2 
+Dec 20 23:52:49.290 HYPERVISOR: exec_cmd: vm slot_add_binding R2 1 0 NM-1FE-TX 
+Dec 20 23:52:49.290 HYPERVISOR: exec_cmd: vm get_status R2 
+Dec 20 23:52:49.290 HYPERVISOR: exec_cmd: vm slot_add_binding R2 2 0 NM-4T 
+Dec 20 23:52:49.291 HYPERVISOR: exec_cmd: vm get_status R2 
+Dec 20 23:52:49.291 HYPERVISOR: exec_cmd: vm slot_add_binding R2 3 0 NM-16ESW 
+Dec 20 23:52:49.406 HYPERVISOR: exec_cmd: nio create_udp udp-f3bf0f33-df1d-4845-ae0c-c544efb9d798 10002 127.0.0.1 10003 
+Dec 20 23:52:49.637 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 0 1 udp-f3bf0f33-df1d-4845-ae0c-c544efb9d798 
+Dec 20 23:52:49.638 HYPERVISOR: exec_cmd: vm get_status R2 
+Dec 20 23:52:49.998 HYPERVISOR: exec_cmd: nio create_udp udp-0846c399-7251-46de-ac22-36832f4a289f 10010 127.0.0.1 10011 
+Dec 20 23:52:49.999 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R2 0 0 udp-0846c399-7251-46de-ac22-36832f4a289f 
+Dec 20 23:52:50.000 HYPERVISOR: exec_cmd: vm get_status R2 
+Dec 20 23:52:52.858 HYPERVISOR: exec_cmd: vm set_ghost_status R2 2 
+Dec 20 23:52:52.859 HYPERVISOR: exec_cmd: vm set_ghost_file R2 /Users/dennis/GNS3/projects/simple-multipool-dhcp/project-files/dynamips/c3660-a3jk9s-mz.124-19.image-192.ghost 
+Dec 20 23:52:52.859 HYPERVISOR: exec_cmd: vm get_status R2 
+Dec 20 23:52:52.860 HYPERVISOR: exec_cmd: vm set_config R2 configs/i2_startup-config.cfg 
+Dec 20 23:52:52.860 HYPERVISOR: exec_cmd: vm start R2 
+Dec 20 23:53:23.106 HYPERVISOR: exec_cmd: vm extract_config R2 
+Dec 20 23:58:01.980 HYPERVISOR: exec_cmd: nio bind_filter udp-f3bf0f33-df1d-4845-ae0c-c544efb9d798 2 capture 
+Dec 20 23:58:01.980 HYPERVISOR: exec_cmd: nio setup_filter udp-f3bf0f33-df1d-4845-ae0c-c544efb9d798 2 en10mb /Users/dennis/GNS3/projects/simple-multipool-dhcp/project-files/captures/R2_FastEthernet01_to_R1_FastEthernet00.pcap 
+Dec 21 00:05:35.762 HYPERVISOR: exec_cmd: nio unbind_filter udp-f3bf0f33-df1d-4845-ae0c-c544efb9d798 2 
+Dec 21 00:05:42.242 HYPERVISOR: exec_cmd: vm get_status R2 
+Dec 21 00:05:42.243 HYPERVISOR: exec_cmd: vm stop R2 
+Dec 21 00:05:42.337 VM: VM R2 shutdown.
+Dec 21 00:05:42.337 HYPERVISOR: exec_cmd: vm extract_config R2 
+Dec 21 00:05:42.953 HYPERVISOR: exec_cmd: vm get_status R2 
+Dec 21 00:05:42.954 HYPERVISOR: exec_cmd: vm extract_config R2 
+Dec 21 00:05:42.955 HYPERVISOR: exec_cmd: vm delete R2 
+Dec 21 00:05:42.955 VM: VM R2 destroyed.
+Dec 21 00:05:42.957 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 21 00:05:43.240 HYPERVISOR: Stopped.
+Dec 21 00:05:43.241 GENERAL: reset done.
